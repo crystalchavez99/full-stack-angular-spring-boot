@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Customer = void 0;
 var Customer = /** @class */ (function () {
     // properties
     // private firstName: string;
@@ -51,12 +54,13 @@ var Customer = /** @class */ (function () {
     });
     return Customer;
 }());
+exports.Customer = Customer;
 // let myCustomer = new Customer("Crystal", "Chavez");
 // // myCustomer.firstName = "Shiny";
 // // myCustomer.lastName = "Chariot";
 // console.log(myCustomer)
-var newCustomer = new Customer("Taylor", "Swift");
-newCustomer.firstName = "Tyler";
-newCustomer.lastName = "Shift";
-console.log(newCustomer.firstName, newCustomer.lastName);
+// let newCustomer = new Customer("Taylor", "Swift")
+// newCustomer.firstName = "Tyler"
+// newCustomer.lastName = "Shift"
+// console.log(newCustomer.firstName, newCustomer.lastName)
 // run this tsc --target ES5 --noEmitOnError Customer.ts

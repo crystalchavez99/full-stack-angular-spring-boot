@@ -1,4 +1,4 @@
-class Customer{
+export class Customer{
 
     // properties
     // private firstName: string;
@@ -61,9 +61,9 @@ class Customer{
 
 // console.log(myCustomer)
 
-let newCustomer = new Customer("Taylor", "Swift")
-newCustomer.firstName = "Tyler"
-newCustomer.lastName = "Shift"
-console.log(newCustomer.firstName, newCustomer.lastName)
+// let newCustomer = new Customer("Taylor", "Swift")
+// newCustomer.firstName = "Tyler"
+// newCustomer.lastName = "Shift"
+// console.log(newCustomer.firstName, newCustomer.lastName)
 
 // run this tsc --target ES5 --noEmitOnError Customer.ts
