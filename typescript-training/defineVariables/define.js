@@ -7,3 +7,4 @@ console.log("Your grade is ".concat(grade));
 found = false;
 grade = 50;
 console.log("Oh no your grade is ".concat(grade, " and this is ").concat(found));
+//tsc -noEmitOnError (bypass errors)

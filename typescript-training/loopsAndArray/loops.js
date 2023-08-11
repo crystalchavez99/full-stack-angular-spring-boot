@@ -19,6 +19,7 @@ for (var _i = 0, reviews_1 = reviews; _i < reviews_1.length; _i++) {
 var average = total / reviews.length;
 console.log("Review average ".concat(average));
 var sports = ["Golf", "Cricket", "Tennis", "Swimming"];
+sports.push("Soccer");
 for (var _a = 0, sports_1 = sports; _a < sports_1.length; _a++) {
     var sport = sports_1[_a];
     if (sport == "Cricket") {
