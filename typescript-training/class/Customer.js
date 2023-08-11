@@ -1,8 +1,19 @@
 var Customer = /** @class */ (function () {
+    // properties
+    // private firstName: string;
+    // private lastName: string;
+    // alternative syntax "accessors"
+    // private _firstName: string;
+    // private _lastName: string;
     // constructor
-    function Customer(firstName, lastName) {
-        this._firstName = firstName;
-        this._lastName = lastName;
+    // constructor(firstName: string, lastName: string){
+    //     this._firstName = firstName;
+    //     this._lastName = lastName;
+    // }
+    // theres a shortcut for parameters
+    function Customer(_firstName, _lastName) {
+        this._firstName = _firstName;
+        this._lastName = _lastName;
     }
     Object.defineProperty(Customer.prototype, "firstName", {
         // since properties are private we use the getters
@@ -23,7 +34,7 @@ var Customer = /** @class */ (function () {
             return this._firstName;
         },
         set: function (firstName) {
-            this.firstName = firstName;
+            this._firstName = firstName;
         },
         enumerable: false,
         configurable: true
@@ -33,7 +44,7 @@ var Customer = /** @class */ (function () {
             return this._lastName;
         },
         set: function (lastName) {
-            this.lastName = lastName;
+            this._lastName = lastName;
         },
         enumerable: false,
         configurable: true
@@ -46,5 +57,6 @@ var Customer = /** @class */ (function () {
 // console.log(myCustomer)
 var newCustomer = new Customer("Taylor", "Swift");
 newCustomer.firstName = "Tyler";
-console.log(newCustomer.firstName);
+newCustomer.lastName = "Shift";
+console.log(newCustomer.firstName, newCustomer.lastName);
 // run this tsc --target ES5 --noEmitOnError Customer.ts

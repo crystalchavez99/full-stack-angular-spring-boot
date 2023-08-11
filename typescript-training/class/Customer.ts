@@ -5,12 +5,16 @@ class Customer{
     // private lastName: string;
 
     // alternative syntax "accessors"
-    private _firstName: string;
-    private _lastName: string;
+    // private _firstName: string;
+    // private _lastName: string;
     // constructor
-    constructor(firstName: string, lastName: string){
-        this._firstName = firstName;
-        this._lastName = lastName;
+    // constructor(firstName: string, lastName: string){
+    //     this._firstName = firstName;
+    //     this._lastName = lastName;
+    // }
+    // theres a shortcut for parameters
+    constructor(private _firstName: string, private _lastName: string){
+
     }
 
     // since properties are private we use the getters
@@ -37,7 +41,7 @@ class Customer{
     }
 
     public set firstName(firstName: string){
-        this.firstName = firstName;
+        this._firstName = firstName;
     }
 
     public get lastName(): string{
@@ -47,7 +51,7 @@ class Customer{
 
 
     public set lastName(lastName: string){
-         this.lastName = lastName;
+         this._lastName = lastName;
     }
 }
 
@@ -59,6 +63,7 @@ class Customer{
 
 let newCustomer = new Customer("Taylor", "Swift")
 newCustomer.firstName = "Tyler"
-console.log(newCustomer.firstName)
+newCustomer.lastName = "Shift"
+console.log(newCustomer.firstName, newCustomer.lastName)
 
 // run this tsc --target ES5 --noEmitOnError Customer.ts
